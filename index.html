@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday!</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow: hidden;
+    }
+    .container {
+      text-align: center;
+      color: white;
+      animation: fadeIn 2s ease-in-out;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+      animation: pop 1s ease forwards;
+    }
+    p {
+      font-size: 1.5em;
+      animation: fadeIn 3s ease-in-out 1s forwards;
+      opacity: 0;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pop {
+      0% { transform: scale(0); }
+      80% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+    .balloons {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: rise 10s linear infinite;
+      font-size: 4em;
+    }
+    @keyframes rise {
+      0% { top: 100%; }
+      100% { top: -10%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎉 アイ　お誕生日おめでとう！ 🎉</h1>
+    <p>今日という日が、笑顔とケーキであふれますように。</p>
+  </div>
+  <div class="balloons">🎈🎈🎈</div>
+</body>
+</html>
